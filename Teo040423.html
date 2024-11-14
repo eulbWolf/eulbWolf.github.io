@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<style type="text/css" media="screen">
+.blink_me {
+	  animation: blinker 1s linear infinite;
+	  
+}
+
+.center {
+	  display: block;
+	    margin-left: auto;
+	      margin-right: auto;
+	        width: 100%;
+}
+li{
+	font-weight:300;
+}
+ 
+ul {
+	list-style:none;
+	font-weight:500;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#bibQuote{
+    animation: blink 3s;
+    animation-iteration-count: infinite;
+}
+#bimgOne {
+    animation: blink 3s;
+    animation-iteration-count: infinite;
+}
+#bimgTwo{
+    animation: blink 1s;
+    animation-iteration-count: infinite;
+}
+.blink_me {
+  animation: blinker 3s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+.jim {
+display: flex;
+justify-content: center;
+}
+
+.container{
+padding:50px;
+}
+.row {
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display:         flex;
+flex-wrap: wrap;
+}
+.row > [class*='col-'] {
+display: flex;
+flex-direction: column;
+}
+.center {
+padding: 30px 0;
+border:2px;
+/*
+border: 2px dashed black;
+*/
+text-align: center;
+}
+#notes {
+padding-top:100px;
+}
+#tjnav{
+/*background-image:url('ka.png'); */
+padding-top:300px;
+display:block;
+float:left;
+position:fixed;
+font-size: 30px;
+font-weight:300;
+padding: 5px;;
+width: 130px;
+z-index: 100;
+}
+
+
+body{
+
+/*background-image: url('c7.png'); */
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-position: center top;
+ font-weight:400;
+    }
+    body::before{
+	      opacity: 0.6;
+    }
+</style>
+
+
+<title> Form Practice </title>
+
+</head>
+
+
+<body>
+		<div id="studenttree" class="center" style="display:none">
+			Student Tree
+			<div id="Lists">
+				Files
+			<div id="Functions">
+				Files
+				</div>
+				</div>
+			<div id="pyint">
+<iframe src="https://trinket.io/embed/python/3d8d7ce66b" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+				</div>
+
+			</div>
+
+
+	
+	<div class="center" id="simpleform"> 
+
+		<form id="formy" >
+	         <div>
+		<label for="username"> Username </label>
+	           <input id="username", name="username">
+		 </div>
+
+		   <div>
+		<label for="password"> Password</label>
+	           <input type="password" id="password", name="password">
+		   </div>
+		   <button type="submit"> Submit</button>
+
+		</form>
+		
+	</div>
+
+
+
+
+          	<script>
+		auth = localStorage.getItem("auth");
+		console.log("current login state");
+		console.log(auth);
+		</script>
+
+
+
+
+		<script charset="utf-8">
+			function logOut(){
+			localStorage.setItem("auth", "0")
+			alert("You have been logged out.")
+			location.reload();
+			};
+			//the following will refresh the page which we want to happen. That way 
+			// we can have the browser check to see what it should reload.
+			
+		</script>	
+
+
+
+
+		<script charset="utf-8">
+			let name = "Jose Chavez"
+			console.log(`story ${name} story`);
+		</script>
+
+		<div class="accordion" id="accordionExample">
+			  <div class="accordion-item">
+				      <h2 class="accordion-header" id="headingOne">
+					            <button
+								            class="accordion-button"
+									            type="button"
+										            data-mdb-toggle="collapse"
+											            data-mdb-target="#collapseOne"
+												            aria-expanded="true"
+													            aria-controls="collapseOne"
+														          >
+															          Accordion Item #1
+																        </button>
+							        </h2>
+								    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-mdb-parent="#accordionExample">
+									          <div class="accordion-body">
+											          <strong>This is the first item's accordion body.</strong> It is hidden by default,
+												          until the collapse plugin adds the appropriate classes that we use to style each
+													          element. These classes control the overall appearance, as well as the showing and
+														          hiding via CSS transitions. You can modify any of this with custom CSS or
+															          overriding our default variables. It's also worth noting that just about any HTML
+																          can go within the <strong>.accordion-body</strong>, though the transition does
+																	          limit overflow.
+																		        </div>
+																			    </div>
+																			      </div>
+																			        <div class="accordion-item">
+																					    <h2 class="accordion-header" id="headingTwo">
+																						          <button
+																									          class="accordion-button collapsed"
+																										          type="button"
+																											          data-mdb-toggle="collapse"
+																												          data-mdb-target="#collapseTwo"
+																													          aria-expanded="false"
+																														          aria-controls="collapseTwo"
+																															        >
+																																        Accordion Item #2
+																																	      </button>
+																								      </h2>
+																								          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-mdb-parent="#accordionExample">
+																										        <div class="accordion-body">
+																												        <strong>This is the second item's accordion body.</strong> It is hidden by
+																													        default, until the collapse plugin adds the appropriate classes that we use to
+																														        style each element. These classes control the overall appearance, as well as the
+																															        showing and hiding via CSS transitions. You can modify any of this with custom CSS
+																																        or overriding our default variables. It's also worth noting that just about any
+																																	        HTML can go within the <strong>.accordion-body</strong>, though the transition
+																																		        does limit overflow.
+																																			      </div>
+																																			          </div>
+																																				    </div>
+																																				      <div class="accordion-item">
+																																					          <h2 class="accordion-header" id="headingThree">
+																																							        <button
+																																									        class="accordion-button collapsed"
+																																										        type="button"
+																																											        data-mdb-toggle="collapse"
+																																												        data-mdb-target="#collapseThree"
+																																													        aria-expanded="false"
+																																														        aria-controls="collapseThree"
+																																															      >
+																																															              Accordion Item #3
+																																																            </button>
+																																									    </h2>
+																																									        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-mdb-parent="#accordionExample">
+																																											      <div class="accordion-body">
+																																												              <strong>This is the third item's accordion body.</strong> It is hidden by default,
+																																													              until the collapse plugin adds the appropriate classes that we use to style each
+																																														              element. These classes control the overall appearance, as well as the showing and
+																																															              hiding via CSS transitions. You can modify any of this with custom CSS or
+																																																              overriding our default variables. It's also worth noting that just about any HTML
+																																																	              can go within the <strong>.accordion-body</strong>, though the transition does
+																																																		              limit overflow.
+																																																			            </div>
+																																																				        </div>
+																																																					  </div>
+		</div>
+
+
+		<div class="center" style="background-color:black;color:green">
+		<pre>
+		<code>
+           ourform.addEventListener('submit', (e) => {
+    		pw = document.getElementById("password")
+    		un = document.getElementById("username")
+    		let cred = {"username": un , "password": pw}
+    
+		console.log(`Trying to fetch man ${h}`)
+    	       fetch('http://hb.bluewfjc.online/login', {
+    	    	method: 'POST',
+    	    	mode:'cors',
+    	    	headers:{
+    	    		'Content-Type': 'application/json'
+    	    	},
+    	    	body: JSON.stringify(cred),
+    	           }).then(r => r.json())
+    	    	.then(token =>{
+    	    	if (token.access_token){
+    	    	   localStorage.setItem("token", token)
+    	    	   document.getElementById("studenttree").style.display="block";
+		   console.log("confirmed")
+           	    	} else{
+        	    	console.log("Wrong credentials");
+        	    	document.getElementById("studenttree").style.display="none";
+        	    }
+        	    	}
+    
+    	)
+//FETCH END
+
+
+		</code>
+
+		</pre>
+
+		</div>
+
+
+		<script charset="utf-8">
+			
+           const ourform = document.getElementById("simpleform");
+
+           ourform.addEventListener('submit', (e) => {
+	   	e.preventDefault();
+    		var pw = document.getElementById("password").value;
+    		var un = document.getElementById("username").value;
+    		var cred = {"username": un , "password": pw}
+
+		console.log("The credentials")
+		console.log(cred)
+    	       fetch('http://hb.bluewfjc.online/login', {
+    	    	method: 'POST',
+    	    	headers:{
+    	    		'Content-Type': 'application/json'
+    	    	},
+    	    	body: JSON.stringify(cred),
+    	           }).then(r => r.json())
+    	    	.then(token =>{
+    	    	if (token.access_token){
+		console.log("Body of the if statement for if there's an access token returned.")
+		console.log(token);
+			localStorage.setItem("auth","0")
+    	    	   document.getElementById("studenttree").style.display="block";
+           	    	} else{
+        	    	console.log("Wrong credentials");
+        	    	document.getElementById("studenttree").style.display="none";
+			console.log("After the part where we supposedly are having the div have its style set to hidden")
+        	    }
+        	    	}
+                   )
+	   }
+	   )
+
+		</script>
+
+
+
+	<script >
+	
+		//check the current value of auth from local storage and grab it
+
+		let a = localStorage.getItem("auth");
+		console.log(a);
+
+		if (a === "0"){
+		//render the form
+		document.getElementById("studenttree").style.display="none";
+		};
+
+		if (a === "1"){
+		//render the form but also render a div that is a download link
+		document.getElementById("studenttree").style.display="block";
+		};
+
+		</script>
+	Vittoria.
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+
+</html>
+

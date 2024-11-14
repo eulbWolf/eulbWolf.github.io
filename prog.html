@@ -1,0 +1,188 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- AOS added jose-->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<style type="text/css" media="screen">
+.btn-group button {
+	  background-color: #a6e5ff;
+	    border: 1px solid blue; /* Green border */
+	      color: white; /* White text */
+	        padding: 10px 24px; /* Some padding */
+		  cursor: pointer; /* Pointer/hand icon */
+		    float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+	  content: "";
+	    clear: both;
+	      display: table;
+}
+
+.btn-group button:not(:last-child) {
+	  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+	  background-color: blue;/* adjust later*/
+}
+.blink_me {
+	  animation: blinker 1s linear infinite;
+	  
+}
+
+.center {
+	  display: block;
+	    margin-left: auto;
+	      margin-right: auto;
+	        width: 100%;
+}
+li{
+	font-weight:300;
+}
+ 
+ul {
+	list-style:none;
+	font-weight:500;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#bibQuote{
+    animation: blink 3s;
+    animation-iteration-count: infinite;
+}
+#bimgOne {
+    animation: blink 3s;
+    animation-iteration-count: infinite;
+}
+#bimgTwo{
+    animation: blink 1s;
+    animation-iteration-count: infinite;
+}
+.blink_me {
+  animation: blinker 3s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+.jim {
+display: flex;
+justify-content: center;
+}
+
+.container{
+padding:50px;
+}
+.row {
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display:         flex;
+flex-wrap: wrap;
+}
+.row > [class*='col-'] {
+display: flex;
+flex-direction: column;
+}
+.center {
+padding: 30px 0;
+border:2px;
+/*
+border: 2px dashed black;
+*/
+text-align: center;
+}
+#notes {
+padding-top:100px;
+}
+#tjnav{
+/*background-image:url('ka.png'); */
+padding-top:300px;
+display:block;
+float:left;
+position:fixed;
+font-size: 30px;
+font-weight:300;
+padding: 5px;;
+width: 130px;
+z-index: 100;
+}
+
+
+body{
+
+background-image:url('skyblue.jpg'); 
+/*background-image: url('c7.png'); */
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-position: center;
+ font-weight:400;
+    }
+    body::before{
+	      opacity: 0.6;
+    }
+</style>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-JN6YPV41S9"></script>
+	<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-JN6YPV41S9');
+	</script>
+
+<title>Blue Wolf Tutoring</title>
+
+</head>
+
+
+<body>
+	<div style="font-size:40px">Programming</div>
+	<ul>
+		<li>- Google Sheets (and most of the suite which is an excellent free software)</li> 
+		<li>- Python: Beginning to Early Advanced Concepts </li>
+		<li>- JavaScript: Beginning to Early Advanced Concepts (very different from Python!) </li>
+		<li>- Web Development: HTML, CSS and Concepts of the Web </li>
+		<li>- Frameworks: Python's Flask Framework and JavaScript's React Framework </li>
+		<li>- Apache and Creating Your Own Personal Web Server</li>
+		<li>-Bash Scripting</li>
+		<li>-LaTex: Create Professional Mathematical Documents</li>
+	</ul>
+	</div> <!-- subjects-->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,11 @@
+body{
+background-image:url('../Images/mb.jpeg'); 
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-position: center;
+ color:white;
+ font-weight:400;
+font-family: Arial, sans-serif;
+line-height: 1.6;
+}
