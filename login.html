@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jose G. Chavez</title>
+<!-- AOS added jose-->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+crossorigin="anonymous">
+
+<!-- Our style sheets -->
+<link rel="stylesheet" href="css/newnav.css">
+<link rel="stylesheet" href="css/ctcss.css">
+<link rel="stylesheet" href="css/bodycss.css">
+<link rel="stylesheet" href="sticky.css">
+
+<script type="text/javascript" id="MathJax-script" defer
+src="mathjax/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<style type="text/css" media="screen">
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+
+}
+
+.sticky-container {
+position: fixed;
+left: 0;
+top: 50%;
+transform: translateY(-50%);
+background-color: black;
+padding: 10px;
+border-radius: 5px;
+
+}
+
+.sticky-button {
+cursor: pointer;
+background-color: #3498db;
+background-color:black;
+color: white;
+padding: 10px 20px;
+border-radius: 5px;
+text-align: center;
+font-size:8px;
+}
+
+.sticky-content {
+display: none;
+margin-top: 10px;
+color:green;
+}
+
+.close-button {
+background-color: #e74c3c;
+color: white;
+border: none;
+padding: 5px 10px;
+border-radius: 3px;
+cursor: pointer;
+
+}
+
+.floating-container {
+position: fixed;
+width: 100%;
+height: 100%;
+pointer-events: none;
+overflow: hidden;
+}
+
+.floating-symbol {
+position: absolute;
+font-size: 24px;
+color: black;
+opacity: 1;
+animation: floatAnimation 10s linear infinite;
+}
+
+@keyframes floatAnimation {
+0% {
+transform: translateY(0);
+opacity: 1;
+}
+
+100% {
+transform: translateY(calc(100vh + 20px));
+opacity: 0;
+}
+}
+
+body {
+background-color: white;
+color: black;
+}
+</style>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+processEscapes: true
+},
+skipStartupTypeset: false
+});
+</script>
+</head>
+
+<body>
+
+
+
+
+
+
+<div class="center-text">
+<h1>Login</h1>
+<br></br>
+<br></br>
+<br></br>
+  <form id="login-form">
+    <input type="text" id="username" placeholder="Username" required><br>
+    <input type="password" id="password" placeholder="Password" required><br>
+    <button type="submit">Log In</button>
+  </form>
+  </div>
+  <br></br>
+  <br></br>
+  <br></br>
+  <br></br>
+
+  <div class="center-text">
+	  Not currently accepting random "sign ups". Contact me to be a "close buddy".
+  	
+  </div>
+
+  <script>
+    document.getElementById('login-form').addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      try {
+        const response = await fetch('http://auth.redbeginning.online/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ username, password })
+        });
+
+        const data = await response.json();
+        if (response.ok) {
+          const token = data.token;
+          console.log('Token:', token);
+          // Save the token securely (e.g., in localStorage)
+        } else {
+          console.error('Error:', data.message);
+        }
+      } catch (error) {
+        console.error('Error:', error.message);
+      }
+    });
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
+
+

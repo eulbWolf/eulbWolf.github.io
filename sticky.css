@@ -1,0 +1,56 @@
+/* Styling Body-part */
+.body-part {
+  overflow: auto;
+  position: relative;
+  padding: 20px;
+  line-height: 1.6;
+  color: red;
+}
+
+h2 {
+  color: #FFD700; /* Gold color for contrast and visibility against black background */
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Justifying Content text */
+p {
+  text-align: justify;
+  margin: 20px 0; /* Reduced margin for better use of space */
+}
+
+/* Styling icons */
+.icon-list {
+  position: fixed;
+  top: 50%;
+  right: 20px; /* Added some space from the right edge of the screen */
+  transform: translateY(-50%);
+}
+
+.icon-list a {
+  display: block;
+  text-align: center;
+  padding: 10px; /* Increased padding for larger click area */
+  transition: all 0.3s ease; /* Reduced transition time for quicker response */
+  color:red;
+  text-decoration: none; /* Removed underline from links */
+  margin-bottom: 10px; /* Added some space between icons */
+}
+
+/* Designing each icon */
+.instagram, .facebook, .twitter, .linkedin, .google, .youtube {
+  background-color: #FF0000; 
+  color: red; 
+}
+
+.icon-list a:hover {
+  background: rgba(255, 255, 255, 0.2); /* Slightly darker background on hover for an interactive feel */
+}
+
+/* Assuming you have an icon class like this: */
+.icon {
+  /* Add your icon properties here */
+  width: 24px;
+  height: 24px;
+}
+

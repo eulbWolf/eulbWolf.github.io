@@ -1,0 +1,539 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.30/Tone.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Linking Font-Awesome For the Icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- JC's style sheets 	-->
+<link rel="stylesheet" href="css/navcss.css"/>
+<link rel="stylesheet" href="css/ctcss.css"/>
+<link rel="stylesheet" href="css/bodycss.css"/>
+<link rel="stylesheet" href="sticky.css"/>
+<link rel="stylesheet" href="video.css"/>
+
+<!-- JC's stylesheets end-->
+
+
+
+<style type="text/css" media="screen">
+
+/* links and lists style start */
+
+ a:link {
+color: white;
+background-color: transparent;
+text-decoration: none;
+ }
+
+li{
+	font-weight:300;
+}
+ul {
+    padding-left: 20px;
+}
+ 
+ul {
+	list-style:none;
+	font-weight:500;
+}
+/* links and lists style end */
+ canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+
+.blink_me {
+	  animation: blinker 1s linear infinite;
+	  
+}
+.center {
+	  display: block;
+	    margin-left: auto;
+	      margin-right: auto;
+	        width: 100%;
+text-align: center;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* container and grid style start */
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+padding:50px;
+}
+
+.row {
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display:         flex;
+flex-wrap: wrap;
+}
+.row > [class*='col-'] {
+display: flex;
+flex-direction: column;
+}
+/* container and grid style end */
+
+.content {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+h2, h3 {
+    color: #333;
+}
+		  body {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+ 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+#footer {
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+#footer img {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+}
+
+</style>
+
+<!-- Google Analytics BEG-->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-JN6YPV41S9"></script>
+	<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-JN6YPV41S9');
+	</script>
+
+<!-- Google Analytics END-->
+
+<title>Blue Fox Tutoring</title>
+
+</head>
+
+
+<body>
+<!-- The social media icon bar -->
+		<!-- Icons for the sticky Social Bar -->
+<div id="videoPopup">
+  <video id="myVideo" width="500" height="380" muted>
+    <source src="blue.mp4" type="video/mp4">
+  </video>
+
+  <div id="buttonContainer">
+    <button id="playButton">Play</button>
+    <button id="soundButton">Sound On</button>
+    <button id="closeButton">Close</button>
+  </div>
+</div>
+<script charset="utf-8">
+	var video = document.getElementById("myVideo");
+  video.playbackRate = 1.5;
+	
+</script>
+
+<div id="contactForm" style="display: none; position: fixed; right: 0; top: 50%; transform: translateY(-50%);">
+    <form action="send_email.php" method="post">
+        <label for="fname">Name</label><br>
+        <input type="text" id="name" name="name" value=""><br>
+        <label for="email">Email</label><br>
+        <input type="text" id="email" name="email" value=""><br>
+        <label for="message">Message</label><br>
+        <textarea id="message" name="message"></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+<script>
+	function toggleForm() {
+    var form = document.getElementById('contactForm');
+    var button = document.getElementById('contactButton');
+    if (form.style.display === 'none') {
+        form.style.display = 'block';
+        button.style.right = "300px";  // Adjust this value based on the width of your form
+        button.innerHTML = "Hide Contact Form";
+    } else {
+        form.style.display = 'none';
+        button.style.right = "20px";
+        button.innerHTML = "Contact Us";
+    }
+}
+
+	</script>
+
+
+<!-- Nav Bar-->
+<!-- Nav Bar-->
+<!-- Nav Bar-->
+<!-- Nav Bar-->
+		<div id="tjnav" style ="padding-top:100px">
+			<a href="index.html"> Home </a>
+			<br></br>
+			<a href="about.html"> About </a>
+			<br></br>
+			<a href="#subjects">
+				Teaching
+				<div style="font-size:22px">
+				 (Subjects)
+				</div>
+			</a>
+			<br></br>
+			<a href="consulting.html"> Consulting  <div style="font-size:22px ">(Stats
+					and ML) </div></a>
+			<br></br>
+			<a href="http://students.bluewfjc.online"> Login </a>
+		       </div><!-- nav bar div-->
+<!-- Nav Bar-->
+<!-- Nav Bar-->
+<!-- Nav Bar-->
+
+
+
+		<div class="center">
+		<img src="bf.jpg" alt="Bluefox" width="100%" height="400">
+		</div>
+
+		<div class="body-part">v {
+  top: 10%;
+  color: white;
+  display: block;
+  float: left;
+  position: fixed;
+  font-size: 25px;
+  font-weight: 300;
+  padding: 5px;
+  width: 130px;
+  z-index: 100;
+  height: 80%; /* This will make it span from top to bottom */
+  background: linear-gradient(to bottom, #333, #222); /* Gradient background */
+  overflow-x: hidden; /* This will hide any overflow on the x-axis */
+  padding: 8px 0; /* Some padding for aesthetics */
+  transition: background-color 0.3s ease; /* Transition effect */
+}
+
+/* Styles for navbar links */
+#tjnav a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 10px;
+}
+
+/* Hover effect for navbar links */
+#tjnav a:hover {
+  background-color: #555;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  #tjnav {
+    /* Add styling for smaller screens */
+  }
+}
+
+			<div class="icon-list">
+				<a href="#instagram" class="instagram">
+					<i class="fa fa-instagram"></i>
+				</a>
+				
+				<a href="#facebook" class="facebook">
+					<i class="fa fa-facebook"></i>
+				</a>
+				
+				<a href="#twitter" class="twitter">
+					<i class="fa fa-twitter"></i>
+				</a>
+				
+				<a href="#linkedin" class="linkedin">
+					<i class="fa fa-linkedin"></i>
+				</a>
+				<!--	
+				<a href="#google" class="google">
+					<i class="fa fa-google"></i>
+				</a>
+				-->
+				
+				<a href="#youtube" class="youtube">
+					<i class="fa fa-youtube"></i>
+				</a>
+			</div>
+
+			<!-- Content of the Page -->
+		</div>
+
+		<button id="contactButton" style="color:black;background-color:white;position:
+			fixed; right: 0; top: 50%; transform: translateY(-50%);"
+			onclick="toggleForm()"> Contact! 
+		</button>
+
+
+<!-- Welcome Message-->		
+<!-- Welcome Message-->		
+<!-- Welcome Message-->		
+<!-- Welcome Message-->		
+		<div class="center" style="width:80%">	
+		<p class="lead"> 
+		Welcome to Blue Fox Teaching and Consulting. If you are seeking tutoring/teaching in Mathematics,
+		Statistics or  programming then you have come to the right place!. Please check out the subjects I
+		teach below.
+		
+		<br></br>
+		If you are a business interested in consulting or long-term work please see my sections on
+		consulting. 
+		<br></br>
+		Thank you for visiting and do not be too distracted by the Julia set!
+		
+		</p>
+				</div>
+<!-- Welcome Message-->		
+<!-- Welcome Message-->		
+<!-- Welcome Message-->		
+<!-- Welcome Message-->		
+<div class="center">
+	<canvas  id="canvas">
+
+        </canvas>
+	</div>
+
+		<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+    let canvas = document.getElementById('canvas'),
+        ctx = canvas.getContext('2d'),
+        t = 0,
+        draw,
+        julia;
+    julia = function (d1, d2) {
+        let a,
+            b,
+            an,
+            bn,
+            r,
+            c,
+            i,
+            x,
+            y,
+            red = 0,
+            green = 0,
+            blue = 0,
+            width = canvas.width,
+            height = canvas.height,
+            left = -1,
+            right = 1,
+            up = (((right - left) / width) * height) / 2,
+            down = (((left - right) / width) * height) / 2,
+            stepX = (right - left) / width,
+            stepY = (up - down) / height,
+            index = 0,
+            imageData;
+    
+        ctx.clearRect(0, 0, width, height);
+        ctx.transform(
+            width / (right - left),
+            0,
+            0,
+            -height / (up - down),
+            (width * left) / (left - right),
+            (height * down) / (down - up)
+        );
+    
+        imageData = ctx.createImageData(width, height);
+    
+        for (y = down, r = 0; y < up; y += stepY, r++) {
+            for (x = left, c = 0; x < right; x += stepX, c++) {
+                a = x;
+                b = y;
+    
+                for (i = 0; i <= 100; i++) {
+                    an = a * a - b * b + d1;
+                    bn = 2 * a * b + d2;
+                    a = an;
+                    b = bn;
+    
+                    if (a >= 2 || b >= 2) {
+                        red = (12 * i + i) % 10;
+                        green = (16 * i + i) % 100;
+                        blue = (20 * i + i) % 220;
+                        break;
+                    }
+                }
+    
+                if (a < 2 && b < 2) {
+			/* old values
+
+                    red = 128;
+                    green = 0;
+                    blue = 196;
+		    */
+                    red = 10;
+                    green = 100;
+                    blue = 220;
+                }
+    
+                imageData.data[index++] = red;
+                imageData.data[index++] = green;
+                imageData.data[index++] = blue;
+                imageData.data[index++] = 255;
+            }
+        }
+        ctx.putImageData(imageData, 0, 0);
+    };
+    
+    draw = function () {
+        t += 0.005;
+        julia(Math.cos(t) * 0.8, Math.sin(t) * 0.8);
+    };
+    
+    setInterval(draw, 24);
+});
+			</script>
+		<br></br>
+
+
+
+
+<div class="container" data-aos="fade-up" style="padding-top:20px">
+<!-- Stack the columns on mobile by making one full-width and the other half-width -->
+
+<div class="row">
+<div class ="col-md-12 center" style="width:80%">
+
+<!-- Put an image here-->
+
+</div> <!-- column I think -->
+
+</div> <!-- row I think-->
+</div> <!--for the div I am trying to wrap up ? --> 
+<div class="container" data-aos="fade-up">
+<div class="row">
+
+<div class ="col-md-12 center" style="width:80%">
+	<div class="center" style="font-size:50px">
+	Teaching 
+
+	(  <a style="font-size:20px" href="consulting.html">Click Here for Consulting </a> )
+
+	</div>
+
+<a id="aboutme"></a>
+<div style="padding:-10px">
+
+    <div class="container custom-container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h2 style="color:red">Math and Statistics</h2>
+                <ul>
+                    <li><a href="#">Math and Statistics (K-12)</a></li>
+                    <li><a href="#">Math and Statistics University and Beyond</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2 style="color:red">Programming</h2>
+                <ul>
+			<li><a href="#">Python  and Libraries...</a></li>
+			<li><a href="#">JavaScript React and a growing list of libraries... </a></li>
+                    <li><a href="#">HTML/CSS and Web Development and Server Tech...</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+	<h2 style="color:red">Test Preparation</h2>
+                <ul>
+                    <li><a href="#">SAT and ACT</a></li>
+                    <li><a href="#">GRE</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+<br></br>
+	<br></br>
+	<div class="jumbotron">
+		  <h1 class="display-4"> Pay</h1>
+		    <p class="lead"></p>
+		      <hr class="my-4">
+		        <p></p>
+			  <p class="lead">
+			        </p>
+	</div>
+
+	Pay starts at 45$ per hour and goes up depending on what you want to learn, how much
+	background I will need to prepare ahead of time etc.
+	I typically use Zelle and traditional methods of payment. 
+</div> <!-- div holding table-->
+</div>
+</div> <!-- row-->
+
+</div> <!-- container includes and aos-->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
+
+<div id="footer"> 
+  <a href="https://www.facebook.com/profile.php?id=100094177213543" target="_blank">
+    <img src="fb.svg"  style="width:100px;height:px"alt="Facebook">
+  </a>
+  <a href="https://instagram.com/bluetutor2023?igshid=OGQ5ZDc2ODk2ZA==" target="_blank">
+    <img src="ig.png" alt="Instagram">
+  </a>
+</div>
+</body>
+
+
+
+
+
+</html>
