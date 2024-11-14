@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floating 0s and 1s</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .column-container {
+      display: flex;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .floating-text {
+      font-size: 20px;
+      color: black;
+      opacity: 0.6;
+      animation: floatAnimation 5s linear infinite;
+    }
+
+    @keyframes floatAnimation {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(calc(100vh + 20px));
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="column-container">
+    <div class="column">
+      <!-- Add floating digits here -->
+    </div>
+    <div class="column">
+      <!-- Add floating digits here -->
+    </div>
+    <div class="column">
+      <!-- Add floating digits here -->
+    </div>
+    <div class="column">
+      <!-- Add floating digits here -->
+    </div>
+    <div class="column">
+      <!-- Add floating digits here -->
+    </div>
+    <div class="column">
+      <!-- Add floating digits here -->
+    </div>
+    <div class="column">
+      <!-- Add floating digits here -->
+    </div>
+    <div class="column">
+      <!-- Add floating digits here -->
+    </div>
+    <div class="column">
+      <!-- Add floating digits here -->
+    </div>
+  </div>
+
+  <script>
+    const columns = document.querySelectorAll('.column');
+
+    function createFloatingText(column) {
+      const text = Math.random() < 0.5 ? '0' : '1';
+      const floatingText = document.createElement('div');
+      floatingText.className = 'floating-text';
+      floatingText.innerText = text;
+      column.appendChild(floatingText);
+
+      setTimeout(() => {
+        column.removeChild(floatingText);
+      }, 5000);
+    }
+
+    columns.forEach((column) => {
+      setInterval(() => {
+        createFloatingText(column);
+      }, 200);
+    });
+  </script>
+</body>
+</html>
+

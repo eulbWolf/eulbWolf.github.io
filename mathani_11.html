@@ -1,0 +1,157 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Math Symbols Animation</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- MathJax -->
+    <!--
+    <script type="text/javascript"
+            id="MathJax-script"
+            async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    -->
+<script type="text/javascript" id="MathJax-script" defer
+        src="mathjax/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+    <!-- Animation styles -->
+    <style type="text/css">
+        .floating-container {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .floating-symbol {
+            position: absolute;
+            font-size: 24px;
+            color: black;
+            opacity: 1;
+            animation: floatAnimation 10s linear infinite;
+        }
+
+        @keyframes floatAnimation {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(calc(100vh + 20px));
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+      processEscapes: true
+    },
+    skipStartupTypeset: false
+  });
+</script>
+<div class="floating-container">
+    <div class="column" id="column1">
+        <!-- Add floating math symbols here -->
+    </div>
+    <div class="column" id="column2">
+        <!-- Add floating math symbols here -->
+    </div>
+    <div class="column" id="column3">
+        <!-- Add floating math symbols here -->
+    </div>
+    <div class="column" id="column4">
+        <!-- Add floating math symbols here -->
+    </div>
+    <div class="column" id="column5">
+        <!-- Add floating math symbols here -->
+    </div>
+    <div class="column" id="column6">
+        <!-- Add floating math symbols here -->
+    </div>
+    <div class="column" id="column7">
+        <!-- Add floating math symbols here -->
+    </div>
+    <div class="column" id="column8">
+        <!-- Add floating math symbols here -->
+    </div>
+    <div class="column" id="column9">
+        <!-- Add floating math symbols here -->
+    </div>
+</div>
+
+<!-- ... previous code ... -->
+
+
+<script>
+    const columns = document.querySelectorAll('.column');
+
+    columns.forEach((column) => {
+        setInterval(() => {
+            createFloatingSymbolIfQueueIsNotEmpty(column);
+        }, 1000);
+    });
+
+    function createFloatingSymbolIfQueueIsEmpty(column) {
+        // Check if MathJax queue is empty
+        if (MathJax.Hub.queue.queue.length != 1) {
+            createFloatingSymbol(column);
+        }
+    }
+
+    function createFloatingSymbol(column) {
+        const mathSymbols = ['+', '-', '\\times', '\\div', '\\sqrt', '\\int', '\\sum', '\\frac', '\\pi', '\\theta', '\\nabla', '\\partial'];
+        const randomSymbol = mathSymbols[Math.floor(Math.random() * mathSymbols.length)];
+
+        const floatingSymbol = document.createElement('div');
+        floatingSymbol.className = 'floating-symbol';
+        floatingSymbol.innerHTML = `$$${randomSymbol}$$`;
+	floatingSymbol.setAttribute("display","none");
+
+        const xPosition = Math.random() * window.innerWidth;
+        const yPosition = Math.random() * window.innerHeight;
+
+        // Wait for the MathJax queue to be empty and then typeset
+        waitForMathJaxQueueEmpty()
+            .then(() => {
+                MathJax.Hub.Queue(['Typeset', MathJax.Hub, floatingSymbol]);
+            })
+            .then(() => {
+                // After typesetting, set the styles and display the symbol
+                floatingSymbol.style.left = `${xPosition}px`;
+                floatingSymbol.style.top = `${yPosition}px`;
+                floatingSymbol.style.display = 'block'; // Show the element
+            });
+
+        column.appendChild(floatingSymbol);
+    }
+
+    function waitForMathJaxQueueEmpty() {
+        return new Promise(resolve => {
+            function checkQueue() {
+                if (MathJax.Hub.queue.queue.length === 0) {
+                    resolve();
+                } else {
+                    setTimeout(checkQueue, 100); // Check again after a short delay
+                }
+            }
+
+            checkQueue();
+        });
+    }
+</script>
+
+
+</body>
+</html>
+

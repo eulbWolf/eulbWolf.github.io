@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Our style sheets-->
+    <link rel="stylesheet" href="../../css/ctcss.css"/>
+    <link rel="stylesheet" href="../../css/bodycss.css"/>
+    <link rel="stylesheet" href="../../css/newnav.css"/>
+  <title>c542a9a943014ff09e5428d0be4b441c</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+/*      max-width: 36em;*/
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+			<div  style="width:100%" id="navbar-container"> 
+			<a href="../../index.html"> Home </a>
+			<br></br>
+			<a href="../../Adolescent.html"> Adolesecent Insomnia Study </a>
+			<br></br>
+			<br></br>
+			<a href="../../TechandLife.html"> Tech Stocks and Mental Health </a>
+			<a href="../../mentalhealthdataex.html">Mental Health Data Exploration</a>
+			<br></br>
+			<a href="../../statstudies.html"> Does Quizzing Imrove Your Learning Style? (Stats)</a>
+			<br></br>
+			<a href="../../ml_personality.html"> Personality (ML)</a>
+			<br></br>
+			<a href="../../ml_text.html"> Text Classification (ML)</a>
+			<br></br>
+			<a href="../../twittertalk.html"> Twitter Usage and Age(ML)</a>
+			<br></br>
+		</div><!-- nav bar div-->
+
+<div id="757c50ea" class="cell markdown">
+<h1 id="introduction">Introduction</h1>
+<p>Welcome to our brief exploration of machine learning topics through
+one of the most widely used and readily available datasets. The stock
+market!</p>
+</div>
+<div id="6fa6b70e" class="cell markdown">
+<h2 id="the-plan">The Plan</h2>
+<p>The plan is to:</p>
+<ol>
+<li>Explore some company's stock data independently via visuals,
+selections of metrics and some cursory statistical analysis.</li>
+<li>Explore connections between the stock trends of similar corporations
+in the tech industry.</li>
+<li>Consider a question I have as to whether or not forecasting is truly
+improved and by how much if we use similar companies past data to try
+and predict a target companies future stock prices.</li>
+</ol>
+</div>
+<div id="0281ac7e" class="cell markdown"
+data-ExecuteTime="{&quot;end_time&quot;:&quot;2023-08-06T20:21:44.919087Z&quot;,&quot;start_time&quot;:&quot;2023-08-06T20:21:44.912291Z&quot;}">
+<h3 id="terminlogy-and-tech-stack">Terminlogy and Tech Stack</h3>
+<ol>
+<li><strong>Arima models</strong>:
+<ul>
+<li>ARIMA, which stands for AutoRegressive Integrated Moving Average, is
+a class of models that explains a given time series based on its own
+past values, that is, its own lags and the lagged forecast errors.</li>
+</ul></li>
+<li><strong>adfuller from statsmodels.tsa.stattools</strong>:
+<ul>
+<li>The Augmented Dickey-Fuller test (<code>adfuller</code>) is a type
+of statistical test called a unit root test. It's used to determine the
+presence of a unit root in a time series sample, which can help to
+understand if the time series is stationary or not.</li>
+</ul></li>
+<li><strong>autocorrelation</strong>:
+<ul>
+<li>Autocorrelation, also known as serial correlation, is the
+correlation of a signal with a delayed copy of itself as a function of
+delay. In time series data, it's used to determine if a data set or time
+series is random or if there are underlying patterns.</li>
+</ul></li>
+<li><strong>arima model</strong>:
+<ul>
+<li>The ARIMA model, or AutoRegressive Integrated Moving Average model,
+is a popular time series forecasting model that combines the ideas of
+autoregression (AR) and moving averages (MA). It aims to describe the
+autocorrelations in the data.</li>
+</ul></li>
+<li><strong>statsmodels.graphics.tsaplots import plot_acf,
+plot_pacf</strong>:
+<ul>
+<li><code>plot_acf</code> and <code>plot_pacf</code> are functions from
+the <code>statsmodels</code> library used to plot the autocorrelation
+function (ACF) and partial autocorrelation function (PACF) of a time
+series, respectively. These plots are useful for determining the order
+of AR and MA terms in an ARIMA model.</li>
+</ul></li>
+</ol>
+</div>
+<div id="31f57e4c-183b-447c-913e-284369f6430e" class="cell code"
+data-execution_count="1"
+data-ExecuteTime="{&quot;end_time&quot;:&quot;2023-08-06T20:29:06.331666Z&quot;,&quot;start_time&quot;:&quot;2023-08-06T20:29:06.328956Z&quot;}"
+data-noteable="{&quot;cell_type&quot;:&quot;code&quot;,&quot;output_collection_id&quot;:&quot;6672965a-b0b8-4247-9f1a-530cedbc038e&quot;}">
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!pip install yfinance</span></span></code></pre></div>
+</div>
+<div id="371fe2f8" class="cell markdown">
+<h2 id="apples-oranges-and-data-exploration">Apples, Oranges and Data
+Exploration</h2>
+</div>
+<div id="f5415e06" class="cell markdown">
+<p>Now that we have downloaded the necessary packages let's start
+investigating some data for specific companies.</p>
+</div>
+<div id="a4d2b20c" class="cell markdown">
+<h3 id="the-apple">The Apple</h3>
+<p>Since I am quite the Apple fan I am going to start off with checking
+out how Apple has been doing over the years.</p>
+</div>
+<div id="465faf5b" class="cell markdown">
+<p>We are going to import the yfinance package then find its ticker name
+(the way it's entries are referred to in the csv file and extract a "sub
+dataframe" with the stock prices using the ticker name.</p>
+</div>
+<div id="68d004f3-53a8-403b-898c-da34a07eefd8" class="cell code"
+data-execution_count="2"
+data-ExecuteTime="{&quot;end_time&quot;:&quot;2023-08-06T20:29:06.985478Z&quot;,&quot;start_time&quot;:&quot;2023-08-06T20:29:06.333730Z&quot;}"
+data-datalink="{&quot;68e450e0-dede-4d25-8419-40cddeb61e08&quot;:{&quot;applied_filters&quot;:[],&quot;dataframe_info&quot;:{&quot;default_index_used&quot;:false,&quot;orig_num_cols&quot;:7,&quot;orig_num_rows&quot;:1258,&quot;orig_size_bytes&quot;:80512,&quot;truncated_num_cols&quot;:7,&quot;truncated_num_rows&quot;:1258,&quot;truncated_size_bytes&quot;:80512,&quot;truncated_string_columns&quot;:[]},&quot;display_id&quot;:&quot;68e450e0-dede-4d25-8419-40cddeb61e08&quot;,&quot;dx_settings&quot;:{&quot;ALLOW_NOTEABLE_ATTRS&quot;:true,&quot;COLUMN_SAMPLING_METHOD&quot;:&quot;outer&quot;,&quot;DB_LOCATION&quot;:&quot;:memory:&quot;,&quot;DEV_MODE&quot;:false,&quot;DISPLAY_MAX_COLUMNS&quot;:100,&quot;DISPLAY_MAX_ROWS&quot;:50000,&quot;DISPLAY_MODE&quot;:&quot;simple&quot;,&quot;ENABLE_ASSIGNMENT&quot;:true,&quot;ENABLE_DATALINK&quot;:true,&quot;FLATTEN_COLUMN_VALUES&quot;:true,&quot;FLATTEN_INDEX_VALUES&quot;:false,&quot;GENERATE_DEX_METADATA&quot;:false,&quot;HTML_TABLE_SCHEMA&quot;:false,&quot;LOG_LEVEL&quot;:30,&quot;MAX_RENDER_SIZE_BYTES&quot;:104857600,&quot;MAX_STRING_LENGTH&quot;:250,&quot;NUM_PAST_SAMPLES_TRACKED&quot;:3,&quot;RANDOM_STATE&quot;:12648430,&quot;RESET_INDEX_VALUES&quot;:false,&quot;ROW_SAMPLING_METHOD&quot;:&quot;random&quot;,&quot;SAMPLING_FACTOR&quot;:0.1,&quot;SAMPLING_METHOD&quot;:&quot;random&quot;,&quot;STRINGIFY_COLUMN_VALUES&quot;:true,&quot;STRINGIFY_INDEX_VALUES&quot;:false},&quot;sample_history&quot;:[],&quot;sampling_time&quot;:&quot;2023-07-02T19:48:11.118789&quot;,&quot;user_variable_name&quot;:&quot;tickerDf&quot;,&quot;variable_name&quot;:&quot;tickerDf&quot;},&quot;6ba136d1-3fb1-4117-ba45-765db9558510&quot;:{&quot;applied_filters&quot;:[],&quot;dataframe_info&quot;:{&quot;default_index_used&quot;:false,&quot;orig_num_cols&quot;:7,&quot;orig_num_rows&quot;:1258,&quot;orig_size_bytes&quot;:80512,&quot;truncated_num_cols&quot;:7,&quot;truncated_num_rows&quot;:1258,&quot;truncated_size_bytes&quot;:80512,&quot;truncated_string_columns&quot;:[]},&quot;display_id&quot;:&quot;6ba136d1-3fb1-4117-ba45-765db9558510&quot;,&quot;dx_settings&quot;:{&quot;ALLOW_NOTEABLE_ATTRS&quot;:true,&quot;COLUMN_SAMPLING_METHOD&quot;:&quot;outer&quot;,&quot;DB_LOCATION&quot;:&quot;:memory:&quot;,&quot;DEV_MODE&quot;:false,&quot;DISPLAY_MAX_COLUMNS&quot;:100,&quot;DISPLAY_MAX_ROWS&quot;:50000,&quot;DISPLAY_MODE&quot;:&quot;simple&quot;,&quot;ENABLE_ASSIGNMENT&quot;:true,&quot;ENABLE_DATALINK&quot;:true,&quot;FLATTEN_COLUMN_VALUES&quot;:true,&quot;FLATTEN_INDEX_VALUES&quot;:false,&quot;GENERATE_DEX_METADATA&quot;:false,&quot;HTML_TABLE_SCHEMA&quot;:false,&quot;LOG_LEVEL&quot;:30,&quot;MAX_RENDER_SIZE_BYTES&quot;:104857600,&quot;MAX_STRING_LENGTH&quot;:250,&quot;NUM_PAST_SAMPLES_TRACKED&quot;:3,&quot;RANDOM_STATE&quot;:12648430,&quot;RESET_INDEX_VALUES&quot;:false,&quot;ROW_SAMPLING_METHOD&quot;:&quot;random&quot;,&quot;SAMPLING_FACTOR&quot;:0.1,&quot;SAMPLING_METHOD&quot;:&quot;random&quot;,&quot;STRINGIFY_COLUMN_VALUES&quot;:true,&quot;STRINGIFY_INDEX_VALUES&quot;:false},&quot;sample_history&quot;:[],&quot;sampling_time&quot;:&quot;2023-07-03T05:37:29.766881&quot;,&quot;user_variable_name&quot;:&quot;tickerDf&quot;,&quot;variable_name&quot;:&quot;tickerDf&quot;}}"
+data-noteable="{&quot;cell_type&quot;:&quot;code&quot;,&quot;output_collection_id&quot;:&quot;1a2913d6-eccf-4c9f-8fd0-4cdc6bca47d7&quot;}">
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> yfinance <span class="im">as</span> yf</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the ticker symbol</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>tickerSymbol <span class="op">=</span> <span class="st">&#39;AAPL&#39;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Get data on this ticker</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>tickerData <span class="op">=</span> yf.Ticker(tickerSymbol)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the historical prices for this ticker</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>tickerDf <span class="op">=</span> tickerData.history(period<span class="op">=</span><span class="st">&#39;5y&#39;</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># See the data</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>tickerDf</span></code></pre></div>
+<div class="output execute_result" data-execution_count="2">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Open</th>
+      <th>High</th>
+      <th>Low</th>
+      <th>Close</th>
+      <th>Volume</th>
+      <th>Dividends</th>
+      <th>Stock Splits</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2018-08-06 00:00:00-04:00</th>
+      <td>49.695115</td>
+      <td>49.993764</td>
+      <td>49.472922</td>
+      <td>49.950760</td>
+      <td>101701600</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2018-08-07 00:00:00-04:00</th>
+      <td>50.010491</td>
+      <td>50.053495</td>
+      <td>49.398856</td>
+      <td>49.482479</td>
+      <td>102349600</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2018-08-08 00:00:00-04:00</th>
+      <td>49.229236</td>
+      <td>49.649732</td>
+      <td>48.863690</td>
+      <td>49.515938</td>
+      <td>90102000</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2018-08-09 00:00:00-04:00</th>
+      <td>50.060668</td>
+      <td>50.120398</td>
+      <td>49.503987</td>
+      <td>49.905373</td>
+      <td>93970400</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2018-08-10 00:00:00-04:00</th>
+      <td>49.715959</td>
+      <td>50.133138</td>
+      <td>49.550527</td>
+      <td>49.756718</td>
+      <td>98444800</td>
+      <td>0.1825</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2023-07-31 00:00:00-04:00</th>
+      <td>196.059998</td>
+      <td>196.490005</td>
+      <td>195.259995</td>
+      <td>196.449997</td>
+      <td>38824100</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-08-01 00:00:00-04:00</th>
+      <td>196.240005</td>
+      <td>196.729996</td>
+      <td>195.279999</td>
+      <td>195.610001</td>
+      <td>35175100</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-08-02 00:00:00-04:00</th>
+      <td>195.039993</td>
+      <td>195.179993</td>
+      <td>191.850006</td>
+      <td>192.580002</td>
+      <td>50389300</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-08-03 00:00:00-04:00</th>
+      <td>191.570007</td>
+      <td>192.369995</td>
+      <td>190.690002</td>
+      <td>191.169998</td>
+      <td>61235200</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-08-04 00:00:00-04:00</th>
+      <td>185.520004</td>
+      <td>187.380005</td>
+      <td>181.919998</td>
+      <td>181.990005</td>
+      <td>115799700</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>1258 rows × 7 columns</p>
+</div>
+</div>
+</div>
+<div id="62518289" class="cell markdown">
+<p>If one's eye's scan between big intervals of years then one may
+pretty quickly come to the conclusion that the stocks prices for Apple
+have been climbing. What <strong> is not </strong> as easy to do by
+examining the data in this manner is tell how big the ups and downs in
+stock price have been. It would be easier to quickly get a feel for
+these qualities if we had even a simple plot. Let's get that right now.
+We set up a figure size reasonable for our notebook and add labels (all
+using matplotlib) to get a modest useful visual. Note that I have chosen
+to plot closing prices as the independent variable. However, I would
+likely get similar findings with opening prices as the gap; between them
+doesn't vary as much as the variance between either metric taken over
+long distances of time. It may be of interest to the reader to explore
+this topic on its own!</p>
+</div>
+<div id="c1878d47-6d42-4a62-9d19-ea70ac9d2c45" class="cell code"
+data-execution_count="3"
+data-ExecuteTime="{&quot;end_time&quot;:&quot;2023-08-06T20:29:07.297733Z&quot;,&quot;start_time&quot;:&quot;2023-08-06T20:29:06.986811Z&quot;}"
+data-noteable="{&quot;cell_type&quot;:&quot;code&quot;,&quot;output_collection_id&quot;:&quot;7b4dafbc-8a6b-4210-b93c-523a21db0ca9&quot;}">
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the closing price</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>plt.plot(tickerDf[<span class="st">&#39;Close&#39;</span>])</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;Closing price of AAPL&#39;</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;Date&#39;</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;Closing Price&#39;</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="vertopal_d23781cae453411aa4a7f21311af8868/1771d8f4efd51803169bae2e7b3e4a9f3783908c.png" /></p>
+</div>
+</div>
+<div id="8f6fc053-81d6-4205-b80c-2e5e10d2cc2b" class="cell code"
+data-execution_count="4"
+data-ExecuteTime="{&quot;end_time&quot;:&quot;2023-08-06T20:29:07.300677Z&quot;,&quot;start_time&quot;:&quot;2023-08-06T20:29:07.299208Z&quot;}"
+data-noteable="{&quot;cell_type&quot;:&quot;code&quot;,&quot;output_collection_id&quot;:&quot;54c71328-d077-4d87-a6e7-18221f99f271&quot;}">
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!pip install statsmodels</span></span></code></pre></div>
+</div>
+<div id="a15d47d6-9cd3-4289-9146-c5d9ea9c2064" class="cell code"
+data-execution_count="5"
+data-ExecuteTime="{&quot;end_time&quot;:&quot;2023-08-06T20:29:07.635283Z&quot;,&quot;start_time&quot;:&quot;2023-08-06T20:29:07.301310Z&quot;}"
+data-noteable="{&quot;cell_type&quot;:&quot;code&quot;,&quot;output_collection_id&quot;:&quot;31039e9b-80e7-4851-a991-87202ce23ce7&quot;}">
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.tsa.stattools <span class="im">import</span> adfuller</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform ADF test on the &#39;Close&#39; prices</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> adfuller(tickerDf[<span class="st">&#39;Close&#39;</span>])</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;ADF Statistic: </span><span class="sc">%f</span><span class="st">&#39;</span> <span class="op">%</span> result[<span class="dv">0</span>])</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;p-value: </span><span class="sc">%f</span><span class="st">&#39;</span> <span class="op">%</span> result[<span class="dv">1</span>])</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Critical Values:&#39;</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key, value <span class="kw">in</span> result[<span class="dv">4</span>].items():</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;</span><span class="ch">\t</span><span class="sc">%s</span><span class="st">: </span><span class="sc">%.3f</span><span class="st">&#39;</span> <span class="op">%</span> (key, value))</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>ADF Statistic: -0.647774
+p-value: 0.859818
+Critical Values:
+	1%: -3.436
+	5%: -2.864
+	10%: -2.568
+</code></pre>
+</div>
+</div>
+<div id="c96ab9ea-51de-4e05-afdc-f4112f55d9a8" class="cell code"
+data-execution_count="6"
+data-ExecuteTime="{&quot;end_time&quot;:&quot;2023-08-06T20:29:07.679094Z&quot;,&quot;start_time&quot;:&quot;2023-08-06T20:29:07.637562Z&quot;}"
+data-noteable="{&quot;cell_type&quot;:&quot;code&quot;,&quot;output_collection_id&quot;:&quot;2d146967-7239-4206-89ec-cd9107906beb&quot;}">
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Take the first difference of the closing prices</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>tickerDf[<span class="st">&#39;Close_diff&#39;</span>] <span class="op">=</span> tickerDf[<span class="st">&#39;Close&#39;</span>].diff()</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop the missing values that were created by taking the difference</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>tickerDf <span class="op">=</span> tickerDf.dropna()</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform ADF test on the differenced data</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> adfuller(tickerDf[<span class="st">&#39;Close_diff&#39;</span>])</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;ADF Statistic: </span><span class="sc">%f</span><span class="st">&#39;</span> <span class="op">%</span> result[<span class="dv">0</span>])</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;p-value: </span><span class="sc">%f</span><span class="st">&#39;</span> <span class="op">%</span> result[<span class="dv">1</span>])</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Critical Values:&#39;</span>)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key, value <span class="kw">in</span> result[<span class="dv">4</span>].items():</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;</span><span class="ch">\t</span><span class="sc">%s</span><span class="st">: </span><span class="sc">%.3f</span><span class="st">&#39;</span> <span class="op">%</span> (key, value))</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>ADF Statistic: -37.111311
+p-value: 0.000000
+Critical Values:
+	1%: -3.436
+	5%: -2.864
+	10%: -2.568
+</code></pre>
+</div>
+</div>
+<div id="90d4b290" class="cell markdown">
+<h3 id="correlation-discussion-followed-by-our-analyses">Correlation
+Discussion Followed By Our Analyses</h3>
+<p>When you use <code>plot_acf</code> and <code>plot_pacf</code> from
+<code>statsmodels.graphics.tsaplots</code>, the resulting plots provide
+a visual representation of the autocorrelation and partial
+autocorrelation of a time series, respectively. Here's how you can
+interpret these plots:</p>
+<ol>
+<li><p><strong>Plotting the Autocorrelation Function (ACF) with
+<code>plot_acf</code></strong>:</p>
+<ul>
+<li><p><strong>Stationarity</strong>: If the bars (correlogram) in the
+ACF plot drop off quickly, the series might be stationary. If they
+remain significant over several lags, the series is likely
+non-stationary.</p></li>
+<li><p><strong>Seasonality</strong>: Regular patterns of peaks and
+troughs at consistent intervals can indicate seasonality. For instance,
+a peak every 12 lags in a monthly series suggests annual
+seasonality.</p></li>
+<li><p><strong>Randomness</strong>: If most bars are within the blue
+shaded region (confidence intervals) and are close to zero, the series
+might be random.</p></li>
+<li><p><strong>Model Identification</strong>: If the ACF cuts off after
+a certain number of lags, it suggests a possible MA order for an ARIMA
+model. If it declines gradually, an AR model might be more
+appropriate.</p></li>
+</ul></li>
+<li><p><strong>Plotting the Partial Autocorrelation Function (PACF) with
+<code>plot_pacf</code></strong>:</p>
+<ul>
+<li><p><strong>Model Identification</strong>: The PACF plot can help
+identify the order of the AR term. If the PACF drops to zero after a
+certain number of lags, it suggests that an AR model of that order might
+be suitable. For instance, if the PACF is significant for 2 lags and
+then drops off, an AR(2) model might be a good fit.</p></li>
+<li><p><strong>Lagged Relationships</strong>: Like the ACF, significant
+spikes in the PACF at specific lags indicate a relationship between the
+data point and its lagged values, but after controlling for other
+lags.</p></li>
+</ul></li>
+</ol>
+<p>Here's a simple example using Python to visualize the ACF and PACF:
+We will run it in the next cell.</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.graphics.tsaplots <span class="im">import</span> plot_acf, plot_pacf</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate some example data (e.g., from a DataFrame)</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># data = pd.read_csv(&#39;your_data.csv&#39;)</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co"># ts = data[&#39;your_column&#39;]</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co"># For demonstration purposes, let&#39;s use random data</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>ts <span class="op">=</span> np.random.randn(<span class="dv">100</span>)</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot ACF</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>plot_acf(ts, lags<span class="op">=</span><span class="dv">40</span>)</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;ACF Plot&#39;</span>)</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot PACF</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>plot_pacf(ts, lags<span class="op">=</span><span class="dv">40</span>)</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;PACF Plot&#39;</span>)</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p>When interpreting these plots, it's essential to consider the blue
+shaded region, which represents the confidence intervals. Bars that
+extend beyond this region are considered statistically significant.</p>
+</div>
+<div id="f4babc47" class="cell code" data-execution_count="7"
+data-ExecuteTime="{&quot;end_time&quot;:&quot;2023-08-06T20:29:07.983212Z&quot;,&quot;start_time&quot;:&quot;2023-08-06T20:29:07.681367Z&quot;}">
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.graphics.tsaplots <span class="im">import</span> plot_acf, plot_pacf</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate some example data (e.g., from a DataFrame)</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># data = pd.read_csv(&#39;your_data.csv&#39;)</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co"># ts = data[&#39;your_column&#39;]</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="co"># For demonstration purposes, let&#39;s use random data</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>ts <span class="op">=</span> np.random.randn(<span class="dv">100</span>)</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot ACF</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>plot_acf(ts, lags<span class="op">=</span><span class="dv">40</span>)</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;ACF Plot&#39;</span>)</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot PACF</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>plot_pacf(ts, lags<span class="op">=</span><span class="dv">40</span>)</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;PACF Plot&#39;</span>)</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="vertopal_d23781cae453411aa4a7f21311af8868/92d62508fb091de7ef61e34387b5bb802ba4d2a4.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_d23781cae453411aa4a7f21311af8868/cbfdeb63151139379163a7fe99353ee55b8ccfe6.png" /></p>
+</div>
+</div>
+<div id="5de9c0fc-442b-4772-8afd-e3b796a3efe7" class="cell code"
+data-execution_count="8"
+data-ExecuteTime="{&quot;end_time&quot;:&quot;2023-08-06T20:29:08.217291Z&quot;,&quot;start_time&quot;:&quot;2023-08-06T20:29:07.988072Z&quot;}"
+data-noteable="{&quot;cell_type&quot;:&quot;code&quot;,&quot;output_collection_id&quot;:&quot;dc213195-9d92-4faa-8a17-97b6cc22c438&quot;}">
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.graphics.tsaplots <span class="im">import</span> plot_acf, plot_pacf</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the ACF</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>plot_acf(tickerDf[<span class="st">&#39;Close_diff&#39;</span>], lags<span class="op">=</span><span class="dv">50</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the PACF</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>plot_pacf(tickerDf[<span class="st">&#39;Close_diff&#39;</span>], lags<span class="op">=</span><span class="dv">50</span>)</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="vertopal_d23781cae453411aa4a7f21311af8868/d2f07296d09aab404ba6cb0ff6d6b6ec66c945f4.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_d23781cae453411aa4a7f21311af8868/c686ea3f48e93e664153b02f917894424ebfc24a.png" /></p>
+</div>
+</div>
+<div id="30f4a695" class="cell markdown"
+data-ExecuteTime="{&quot;end_time&quot;:&quot;2023-08-06T20:26:56.950760Z&quot;,&quot;start_time&quot;:&quot;2023-08-06T20:26:56.948511Z&quot;}">
+<h2 id="arima">ARIMA</h2>
+<p>We are</p>
+</div>
+<div id="88fdd1e0-a9f8-4b0d-b1fd-386231abeda8" class="cell code"
+data-execution_count="9"
+data-ExecuteTime="{&quot;end_time&quot;:&quot;2023-08-06T20:29:08.468527Z&quot;,&quot;start_time&quot;:&quot;2023-08-06T20:29:08.219158Z&quot;}"
+data-noteable="{&quot;cell_type&quot;:&quot;code&quot;,&quot;output_collection_id&quot;:&quot;7023934d-62bc-4e2c-bcbc-aafedd1c7578&quot;}">
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.tsa.arima.model <span class="im">import</span> ARIMA</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit an ARIMA(1,1,1) model</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> ARIMA(tickerDf[<span class="st">&#39;Close&#39;</span>], order<span class="op">=</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>))</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>model_fit <span class="op">=</span> model.fit()</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Print out the summary of the model</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(model_fit.summary())</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>                               SARIMAX Results                                
+==============================================================================
+Dep. Variable:                  Close   No. Observations:                 1257
+Model:                 ARIMA(1, 1, 1)   Log Likelihood               -2834.265
+Date:                Sun, 06 Aug 2023   AIC                           5674.530
+Time:                        13:29:08   BIC                           5689.937
+Sample:                             0   HQIC                          5680.321
+                               - 1257                                         
+Covariance Type:                  opg                                         
+==============================================================================
+                 coef    std err          z      P&gt;|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+ar.L1          0.4184      0.288      1.453      0.146      -0.146       0.983
+ma.L1         -0.4739      0.282     -1.683      0.092      -1.026       0.078
+sigma2         5.3400      0.138     38.709      0.000       5.070       5.610
+===================================================================================
+Ljung-Box (L1) (Q):                   0.00   Jarque-Bera (JB):               455.93
+Prob(Q):                              0.99   Prob(JB):                         0.00
+Heteroskedasticity (H):               5.07   Skew:                            -0.08
+Prob(H) (two-sided):                  0.00   Kurtosis:                         5.95
+===================================================================================
+
+Warnings:
+[1] Covariance matrix calculated using the outer product of gradients (complex-step).
+</code></pre>
+</div>
+<div class="output stream stderr">
+<pre><code>/opt/homebrew/lib/python3.11/site-packages/statsmodels/tsa/base/tsa_model.py:473: ValueWarning: A date index has been provided, but it has no associated frequency information and so will be ignored when e.g. forecasting.
+  self._init_dates(dates, freq)
+/opt/homebrew/lib/python3.11/site-packages/statsmodels/tsa/base/tsa_model.py:473: ValueWarning: A date index has been provided, but it has no associated frequency information and so will be ignored when e.g. forecasting.
+  self._init_dates(dates, freq)
+/opt/homebrew/lib/python3.11/site-packages/statsmodels/tsa/base/tsa_model.py:473: ValueWarning: A date index has been provided, but it has no associated frequency information and so will be ignored when e.g. forecasting.
+  self._init_dates(dates, freq)
+</code></pre>
+</div>
+</div>
+<div id="1d43ca9c-a4f5-4abe-b1cc-ab546c9b53eb" class="cell code"
+data-execution_count="10"
+data-ExecuteTime="{&quot;end_time&quot;:&quot;2023-08-06T20:29:08.671954Z&quot;,&quot;start_time&quot;:&quot;2023-08-06T20:29:08.481752Z&quot;}"
+data-datalink="{&quot;51a2d383-15a7-4a2b-90c0-72cbe7936cc6&quot;:{&quot;applied_filters&quot;:[],&quot;dataframe_info&quot;:{&quot;default_index_used&quot;:false,&quot;orig_num_cols&quot;:7,&quot;orig_num_rows&quot;:5,&quot;orig_size_bytes&quot;:320,&quot;truncated_num_cols&quot;:7,&quot;truncated_num_rows&quot;:5,&quot;truncated_size_bytes&quot;:320,&quot;truncated_string_columns&quot;:[]},&quot;display_id&quot;:&quot;51a2d383-15a7-4a2b-90c0-72cbe7936cc6&quot;,&quot;dx_settings&quot;:{&quot;ALLOW_NOTEABLE_ATTRS&quot;:true,&quot;COLUMN_SAMPLING_METHOD&quot;:&quot;outer&quot;,&quot;DB_LOCATION&quot;:&quot;:memory:&quot;,&quot;DEV_MODE&quot;:false,&quot;DISPLAY_MAX_COLUMNS&quot;:100,&quot;DISPLAY_MAX_ROWS&quot;:50000,&quot;DISPLAY_MODE&quot;:&quot;simple&quot;,&quot;ENABLE_ASSIGNMENT&quot;:true,&quot;ENABLE_DATALINK&quot;:true,&quot;FLATTEN_COLUMN_VALUES&quot;:true,&quot;FLATTEN_INDEX_VALUES&quot;:false,&quot;GENERATE_DEX_METADATA&quot;:false,&quot;HTML_TABLE_SCHEMA&quot;:false,&quot;LOG_LEVEL&quot;:30,&quot;MAX_RENDER_SIZE_BYTES&quot;:104857600,&quot;MAX_STRING_LENGTH&quot;:250,&quot;NUM_PAST_SAMPLES_TRACKED&quot;:3,&quot;RANDOM_STATE&quot;:12648430,&quot;RESET_INDEX_VALUES&quot;:false,&quot;ROW_SAMPLING_METHOD&quot;:&quot;random&quot;,&quot;SAMPLING_FACTOR&quot;:0.1,&quot;SAMPLING_METHOD&quot;:&quot;random&quot;,&quot;STRINGIFY_COLUMN_VALUES&quot;:true,&quot;STRINGIFY_INDEX_VALUES&quot;:false},&quot;sample_history&quot;:[],&quot;sampling_time&quot;:&quot;2023-07-03T05:37:43.060237&quot;,&quot;user_variable_name&quot;:null,&quot;variable_name&quot;:&quot;unk_dataframe_74e974f3921b40508097e974072eed99&quot;}}"
+data-noteable="{&quot;cell_type&quot;:&quot;code&quot;,&quot;output_collection_id&quot;:&quot;1d29abf3-8359-48aa-aba8-f55d08c5e6d2&quot;}">
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fetch the historical stock data for Microsoft (MSFT)</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>msft <span class="op">=</span> yf.Ticker(<span class="st">&#39;MSFT&#39;</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the historical prices for this ticker</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>msftDf <span class="op">=</span> msft.history(period<span class="op">=</span><span class="st">&#39;1d&#39;</span>, start<span class="op">=</span><span class="st">&#39;2020-1-1&#39;</span>, end<span class="op">=</span><span class="st">&#39;2023-1-1&#39;</span>)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the first few rows of the data</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>msftDf.head()</span></code></pre></div>
+<div class="output execute_result" data-execution_count="10">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Open</th>
+      <th>High</th>
+      <th>Low</th>
+      <th>Close</th>
+      <th>Volume</th>
+      <th>Dividends</th>
+      <th>Stock Splits</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2020-01-02 00:00:00-05:00</th>
+      <td>153.641607</td>
+      <td>155.528499</td>
+      <td>153.206173</td>
+      <td>155.422058</td>
+      <td>22622100</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2020-01-03 00:00:00-05:00</th>
+      <td>153.196461</td>
+      <td>154.773700</td>
+      <td>152.944865</td>
+      <td>153.486740</td>
+      <td>21116200</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2020-01-06 00:00:00-05:00</th>
+      <td>151.996623</td>
+      <td>153.951256</td>
+      <td>151.445062</td>
+      <td>153.883514</td>
+      <td>20813700</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2020-01-07 00:00:00-05:00</th>
+      <td>154.164134</td>
+      <td>154.502799</td>
+      <td>152.228858</td>
+      <td>152.480438</td>
+      <td>21634100</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2020-01-08 00:00:00-05:00</th>
+      <td>153.786746</td>
+      <td>155.596240</td>
+      <td>152.838465</td>
+      <td>154.909210</td>
+      <td>27746500</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="e971f57f" class="cell markdown">
+<h3 id="the-apple-and-the-orange-meet">The Apple and the Orange
+Meet</h3>
+</div>
+<div id="6f8ab5cf-045a-4714-a013-49a88d2b4250" class="cell code"
+data-execution_count="11"
+data-ExecuteTime="{&quot;end_time&quot;:&quot;2023-08-06T20:29:08.801831Z&quot;,&quot;start_time&quot;:&quot;2023-08-06T20:29:08.672582Z&quot;}"
+data-noteable="{&quot;cell_type&quot;:&quot;code&quot;,&quot;output_collection_id&quot;:&quot;a6c288e6-5337-4494-86db-aea60927d351&quot;}">
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import the necessary library</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the closing prices for Apple and Microsoft</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">14</span>, <span class="dv">7</span>))</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>plt.plot(tickerDf[<span class="st">&#39;Close&#39;</span>], label<span class="op">=</span><span class="st">&#39;Apple&#39;</span>)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>plt.plot(msftDf[<span class="st">&#39;Close&#39;</span>], label<span class="op">=</span><span class="st">&#39;Microsoft&#39;</span>)</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;Apple vs Microsoft - Closing Prices&#39;</span>)</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;Date&#39;</span>)</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;Closing Price (USD)&#39;</span>)</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="vertopal_d23781cae453411aa4a7f21311af8868/7910c6c092a5747492716ea6394fcde69d8e8dd6.png" /></p>
+</div>
+</div>
+<div id="d0353eef" class="cell markdown">
+<h1 id="future-directions">Future Directions</h1>
+<p>This section will continue to develop so please revisit and contact
+me if you have any ideas or would like me to dive more deeply into a
+question you have. Thank you for visiting!</p>
+</div>
+<div id="5a35c4e4" class="cell markdown">
+<h2 id="other-large-and-silently-growing-companies">Other Large and
+Silently Growing Companies</h2>
+</div>
+<div id="d890b42c-8f7d-4cd5-84bf-5baebbeb92f8" class="cell code"
+data-execution_count="12"
+data-ExecuteTime="{&quot;end_time&quot;:&quot;2023-08-06T20:29:09.054862Z&quot;,&quot;start_time&quot;:&quot;2023-08-06T20:29:08.802791Z&quot;}"
+data-noteable="{&quot;cell_type&quot;:&quot;code&quot;,&quot;output_collection_id&quot;:&quot;29b4a53b-f47b-4649-8df0-85829b9cd725&quot;}">
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fetch the historical stock data for The Home Depot (HD)</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>hd <span class="op">=</span> yf.Ticker(<span class="st">&#39;HD&#39;</span>)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the historical prices for this ticker</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>hdDf <span class="op">=</span> hd.history(period<span class="op">=</span><span class="st">&#39;1d&#39;</span>, start<span class="op">=</span><span class="st">&#39;2020-1-1&#39;</span>, end<span class="op">=</span><span class="st">&#39;2023-1-1&#39;</span>)</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the first few rows of the data</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>hdDf.head()</span></code></pre></div>
+<div class="output execute_result" data-execution_count="12">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Open</th>
+      <th>High</th>
+      <th>Low</th>
+      <th>Close</th>
+      <th>Volume</th>
+      <th>Dividends</th>
+      <th>Stock Splits</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2020-01-02 00:00:00-05:00</th>
+      <td>201.584009</td>
+      <td>202.209696</td>
+      <td>200.443032</td>
+      <td>202.117691</td>
+      <td>3935700</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2020-01-03 00:00:00-05:00</th>
+      <td>199.798942</td>
+      <td>202.136088</td>
+      <td>199.440088</td>
+      <td>201.445984</td>
+      <td>3423200</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2020-01-06 00:00:00-05:00</th>
+      <td>199.200885</td>
+      <td>202.430568</td>
+      <td>199.118062</td>
+      <td>202.393768</td>
+      <td>5682800</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2020-01-07 00:00:00-05:00</th>
+      <td>201.970473</td>
+      <td>202.945818</td>
+      <td>199.578106</td>
+      <td>201.068741</td>
+      <td>5685400</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2020-01-08 00:00:00-05:00</th>
+      <td>201.326385</td>
+      <td>205.163362</td>
+      <td>201.206762</td>
+      <td>204.077591</td>
+      <td>4916200</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+</body>
+</html>
