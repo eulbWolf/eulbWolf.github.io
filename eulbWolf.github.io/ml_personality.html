@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Personality Predictor</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- AOS added jose-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Our style sheets-->
+    <link rel="stylesheet" href="css/newnav.css"/>
+    <link rel="stylesheet" href="css/ctcss.css"/>
+    <link rel="stylesheet" href="css/bodycss.css"/>
+    <link rel="stylesheet" href="sticky.css"/>
+    <link rel="stylesheet" href="video.css"/>
+    
+    <style type="text/css" media="screen">
+body{
+	background-color:black;
+background-image:url('pers.jpg'); 
+background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+    </style>
+</head>
+
+
+<body>
+    <!-- Google tag (gtag.js) -->
+
+    <div data-aos="fade-in"> 
+		<div id="navbar-container"> 
+			<a href="index.html"> Home </a>
+
+			<br></br>
+			<a href="Adolescent.html"> Adolesecent Insomnia Study </a>
+			<br></br>
+			<br></br>
+			<a href="TechandLife.html"> Tech Stocks and Mental Health </a>
+			<br></br>
+			<br></br>
+			<a href="mentalhealthdataex.html">Mental Health Data Exploration</a>
+			<br></br>
+			<a href="statstudies.html"> Does Quizzing Imrove Your Learning Style? (Stats)</a>
+			<br></br>
+			<a href="ml_personality.html"> Personality (ML)</a>
+			<br></br>
+			<a href="ml_text.html"> Text Classification (ML)</a>
+			<br></br>
+			<a href="twittertalk.html"> Twitter Usage and Age(ML)</a>
+			<br></br>
+		</div><!-- nav bar div-->
+    </div>
+
+    <div class="center">
+        <canvas id="canvas"></canvas>
+    </div>
+    <br></br>
+
+    <!-- main div -->
+
+    <div class="center-text" style="color: white;line-height:2em">
+        <h1>Welcome to the Personality Predictor!</h1>
+
+	<h2> Why develop a classifier? </h2>
+	Here's some motivations!:
+	<br></br>
+	Certainly! Let's discuss the utility of a personality classifier based on text for a company. There are several potential applications where such a classifier could prove beneficial:
+
+	<br></br>
+1. **Targeted Marketing**: A personality classifier can help a company tailor its marketing strategies and messages to different customer segments. By analyzing the text-based responses from surveys or social media interactions, the classifier can categorize individuals into specific personality types. This enables the company to personalize its advertisements, promotions, and product recommendations based on the preferences, values, and communication styles associated with each personality type. This targeted approach can enhance customer engagement and improve conversion rates.
+
+	<br></br>
+2. **Customer Service Enhancement**: Understanding the personality traits of customers can greatly enhance the effectiveness of customer service interactions. By employing a personality classifier, a company can gain insights into how customers are likely to respond to different approaches, providing guidance to customer service representatives. For example, if a customer is identified as being highly analytical, the representative can provide detailed technical information and data to address their needs, whereas a more emotionally driven customer might require a more empathetic and supportive approach.
+
+	<br></br>
+3. **Product Development**: A personality classifier can assist companies in designing and refining their products and services. By analyzing the text data obtained from surveys or feedback forms, the classifier can identify the dominant personality traits of customers who are satisfied or dissatisfied with the company's offerings. This information can guide product development teams to create products that align with the preferences and needs of specific personality types, leading to increased customer satisfaction and loyalty.
+
+	<br></br>
+4. **Customized Learning and Training**: In an educational context, a personality classifier based on text can aid in personalized learning experiences. By analyzing students' written responses, the classifier can identify their individual learning styles, preferences, and cognitive strengths. This information can be utilized to tailor lesson plans, teaching methodologies, and resources to suit the specific needs of each student, optimizing their learning outcomes.
+
+	<br></br>
+5. **Recruitment and Team Building**: A personality classifier can assist in the recruitment and team-building processes by providing insights into potential candidates' personality traits. By analyzing resumes, cover letters, or online profiles, the classifier can identify the personality types that align with the company's culture and job requirements. This information can help recruiters and hiring managers identify candidates who are likely to fit well within the team and contribute positively to the company's goals.
+	<br></br>
+        <h2>About the Classifier</h2>
+        <p>This tool uses machine learning to predict your personality traits based on text that you provide. Specifically, it uses the Big Five personality traits model (OCEAN) which includes:</p>
+        <ul>
+            <li><b>Openness</b> (inventive/curious vs. consistent/cautious)</li>
+            <li><b>Conscientiousness</b> (efficient/organized vs. easy-going/careless)</li>
+            <li><b>Extraversion</b> (outgoing/energetic vs. solitary/reserved)</li>
+            <li><b>Agreeableness</b> (friendly/compassionate vs. challenging/detached)</li>
+            <li><b>Neuroticism</b> (sensitive/nervous vs. secure/confident)</li>
+        </ul>
+
+        <br></br>
+        <h2><u>How it Works</u></h2>
+        <p>The classifier works by transforming the input text into a numeric representation using the TF-IDF (Term Frequency-Inverse Document Frequency) method. Then, a linear regression model is applied to predict the values of each personality trait. The tool uses a variety of natural language processing (NLP) techniques and machine learning algorithms to achieve this.</p>
+
+        <br></br>
+        <h2><u>Goals</u></h2>
+        <p>The primary goal of this tool is to provide a fun and interactive way for individuals to get a glimpse into how text analysis and machine learning can be used to gain insights into one's personality. It is important to note that while this tool is based on real machine learning algorithms, its predictions are not meant to replace professional personality assessments. Instead, it serves as a simple demonstration of the potential applications of machine learning in psychology and personality studies.</p>
+
+        <br></br>
+        <h2><u>Future Directions</u></h2>
+        <p>While this tool currently uses linear regression models, in the future, we plan to experiment with more complex models like support vector machines (SVMs) and deep learning neural networks to see if they can further improve the accuracy of the predictions. Additionally, we're also considering adding more features like sentiment analysis and entity recognition to provide more nuanced and detailed personality predictions.</p>
+
+        <br></br>
+        <h2><u>Try it out!</u></h2>
+        <p>To get your personality prediction, simply type a sentence or two about yourself in the text box below and click "Submit".</p>
+
+        <br></br>
+
+    </div> <!-- end of main body element -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+</html>
+

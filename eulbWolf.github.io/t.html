@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+
+<style type="text/css" media="screen">
+
+.center {
+	  display: block;
+	    margin-left: auto;
+	      margin-right: auto;
+	        width: 100%;
+		padding:30px 0;
+		border:2px;
+}
+</style>
+
+
+
+<title>T</title>
+
+</head>
+
+
+<body>
+		<div id="studenttree" class="center" style="display:none">
+			Student Tree
+			<div id="Lists">
+				Files
+			<div id="Functions">
+				Files
+				</div>
+				</div>
+			<div id="pyint">
+<iframe src="https://trinket.io/embed/python/3d8d7ce66b" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+				</div>
+
+			</div>
+
+
+	
+	<div class="center" id="simpleform"> 
+
+		<form id="formy" >
+	         <div>
+		<label for="username"> Username </label>
+	           <input id="username", name="username">
+		 </div>
+
+		   <div>
+		<label for="password"> Password</label>
+	           <input type="password" id="password", name="password">
+		   </div>
+		   <button type="submit"> Submit</button>
+
+		</form>
+		
+	</div>
+
+
+
+
+          	<script>
+		auth = localStorage.getItem("auth");
+		console.log("current login state");
+		console.log(auth);
+		</script>
+
+
+
+
+		<script charset="utf-8">
+			function logOut(){
+			localStorage.setItem("auth", "0")
+			alert("You have been logged out.")
+			location.reload();
+			};
+			//the following will refresh the page which we want to happen. That way 
+			// we can have the browser check to see what it should reload.
+			
+		</script>	
+
+
+
+
+		<script charset="utf-8">
+			let name = "Jose Chavez"
+			console.log(`story ${name} story`);
+		</script>
+
+
+		<div class="center" style="background-color:black;color:green">
+		<pre>
+		<code>
+           ourform.addEventListener('submit', (e) => {
+    		pw = document.getElementById("password")
+    		un = document.getElementById("username")
+    		let cred = {"username": un , "password": pw}
+    
+		console.log(`Trying to fetch man ${h}`)
+    	       fetch('http://hb.bluewfjc.online/login', {
+    	    	method: 'POST',
+    	    	mode:'cors',
+    	    	headers:{
+    	    		'Content-Type': 'application/json'
+    	    	},
+    	    	body: JSON.stringify(cred),
+    	           }).then(r => r.json())
+    	    	.then(token =>{
+    	    	if (token.access_token){
+    	    	   localStorage.setItem("token", token)
+    	    	   document.getElementById("studenttree").style.display="block";
+		   console.log("confirmed")
+           	    	} else{
+        	    	console.log("Wrong credentials");
+        	    	document.getElementById("studenttree").style.display="none";
+        	    }
+        	    	}
+    
+    	)
+//FETCH END
+
+
+		</code>
+
+		</pre>
+
+		</div>
+
+
+		<script charset="utf-8">
+			
+           const ourform = document.getElementById("simpleform");
+
+           ourform.addEventListener('submit', (e) => {
+	   	e.preventDefault();
+    		var pw = document.getElementById("password").value;
+    		var un = document.getElementById("username").value;
+    		var cred = {"username": un , "password": pw}
+
+		console.log("The credentials")
+		console.log(cred)
+    	       fetch('http://hb.bluewfjc.online/login', {
+    	    	method: 'POST',
+    	    	headers:{
+    	    		'Content-Type': 'application/json'
+    	    	},
+    	    	body: JSON.stringify(cred),
+    	           }).then(r => r.json())
+    	    	.then(token =>{
+    	    	if (token.access_token){
+		console.log("Body of the if statement for if there's an access token returned.")
+		console.log(token);
+			localStorage.setItem("auth","0")
+    	    	   document.getElementById("studenttree").style.display="block";
+           	    	} else{
+        	    	console.log("Wrong credentials");
+        	    	document.getElementById("studenttree").style.display="none";
+			console.log("After the part where we supposedly are having the div have its style set to hidden")
+        	    }
+        	    	}
+                   )
+	   }
+	   )
+
+		</script>
+
+
+
+	<script >
+	
+		//check the current value of auth from local storage and grab it
+
+		let a = localStorage.getItem("auth");
+		console.log(a);
+
+		if (a === "0"){
+		//render the form
+		document.getElementById("studenttree").style.display="none";
+		};
+
+		if (a === "1"){
+		//render the form but also render a div that is a download link
+		document.getElementById("studenttree").style.display="block";
+		};
+
+		</script>
+	Vittoria.
+
+	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+
+
+</html>
+

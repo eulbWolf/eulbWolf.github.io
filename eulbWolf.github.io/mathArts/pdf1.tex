@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{hyperref}
+
+\title{Introduction to Calculus}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Limits and Continuity}
+Calculus begins with the concept of limits and continuity.
+
+\subsection{Limit}
+The limit of a function \(f(x)\) at a point \(x = a\) is defined as:
+\[
+\lim_{{x \to a}} f(x) = L
+\]
+if for every \(\varepsilon > 0\), there exists a \(\delta > 0\) such that if \(0 < |x - a| < \delta\), then \(|f(x) - L| < \varepsilon\).
+
+\subsection{Continuity}
+A function \(f(x)\) is continuous at a point \(x = a\) if the following three conditions hold:
+\begin{enumerate}
+    \item \(f(a)\) is defined.
+    \item \(\lim_{{x \to a}} f(x)\) exists.
+    \item \(\lim_{{x \to a}} f(x) = f(a)\).
+\end{enumerate}
+
+\section{Derivatives}
+The derivative of a function measures its rate of change.
+
+\subsection{Derivative Definition}
+The derivative of a function \(f(x)\) at a point \(x = a\) is defined as:
+\[
+f'(a) = \lim_{{h \to 0}} \frac{f(a + h) - f(a)}{h}
+\]
+
+\subsection{Differentiability}
+A function \(f(x)\) is differentiable at a point \(x = a\) if the derivative \(f'(a)\) exists.
+
+\section{Integrals}
+Integrals are used to calculate the accumulated area under a curve.
+
+\subsection{Definite Integral}
+The definite integral of a function \(f(x)\) over the interval \([a, b]\) is denoted as:
+\[
+\int_{{a}}^{{b}} f(x) \, dx
+\]
+
+\subsection{Indefinite Integral}
+The indefinite integral of a function \(f(x)\) is denoted as:
+\[
+\int f(x) \, dx
+\]
+
+\section{Conclusion}
+Calculus is a fundamental branch of mathematics that deals with limits, continuity, derivatives, and integrals. These concepts form the basis for understanding changes and accumulation in various mathematical and scientific fields.
+
+\end{document}
+

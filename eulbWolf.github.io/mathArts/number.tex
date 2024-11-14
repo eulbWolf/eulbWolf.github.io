@@ -1,0 +1,365 @@
+\documentclass{article}
+\usepackage{hyperref}
+
+\title{Introduction to Number Theory}
+\author{Jose Chavez}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+Number theory is a branch of mathematics that deals with the properties and relationships of numbers, both integers and rational numbers. Its origins can be traced back to ancient civilizations, but it gained prominence in the late 19th and early 20th centuries through the works of mathematicians like Carl Friedrich Gauss and Pierre de Fermat. Number theory has applications in cryptography, coding theory, and more.
+
+\section{Basic Concepts}
+
+% You can include definitions, theorems, and examples here.
+
+\section{Applications}
+
+% Discuss applications of number theory in various fields.
+
+\section{History}
+
+% Provide a brief history of number theory's development.
+
+
+
+\section{Group Theory Basics}
+
+\begin{definition}
+A group is a set $G$ equipped with a binary operation $\cdot$ that satisfies the following properties:
+\begin{enumerate}
+    \item \textbf{Closure}: For all $a, b \in G$, $a \cdot b \in G$.
+    \item \textbf{Associativity}: For all $a, b, c \in G$, $(a \cdot b) \cdot c = a \cdot (b \cdot c)$.
+    \item \textbf{Identity Element}: There exists an element $e \in G$ such that for all $a \in G$, $a \cdot e = e \cdot a = a$.
+    \item \textbf{Inverse Element}: For each $a \in G$, there exists an element $a^{-1} \in G$ such that $a \cdot a^{-1} = a^{-1} \cdot a = e$.
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}[Lagrange's Theorem]
+In a finite group, the order of any subgroup divides the order of the group.
+\end{theorem}
+
+\section{Ring Theory}
+
+\begin{definition}
+A ring is a set $R$ equipped with two binary operations, addition $(+)$ and multiplication $(\cdot)$, satisfying the following axioms:
+\begin{enumerate}
+    \item $R$ is an abelian group under addition.
+    \item Multiplication is associative.
+    \item The distributive laws hold: $a \cdot (b + c) = a \cdot b + a \cdot c$ and $(a + b) \cdot c = a \cdot c + b \cdot c$ for all $a, b, c \in R$.
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}
+Let $R$ and $S$ be rings. A function $\varphi: R \rightarrow S$ is a ring homomorphism if it preserves both addition and multiplication.
+\end{theorem}
+
+
+\section{Divisibility and Primes}
+
+\begin{definition}
+An integer $a$ is said to divide an integer $b$ (denoted $a \mid b$) if there exists an integer $c$ such that $b = ac$.
+\end{definition}
+
+\begin{theorem}[Fundamental Theorem of Arithmetic]
+Every positive integer greater than 1 can be uniquely factored into prime numbers.
+\end{theorem}
+
+\section{Modular Arithmetic}
+
+\begin{definition}
+Given an integer $m > 1$, two integers $a$ and $b$ are said to be congruent modulo $m$ (denoted $a \equiv b \pmod{m}$) if $a - b$ is divisible by $m$.
+\end{definition}
+
+\begin{theorem}[Chinese Remainder Theorem]
+Given pairwise coprime integers $m$ and $n$, any system of congruences $x \equiv a \pmod{m}$ and $x \equiv b \pmod{n}$ has a unique solution modulo $mn$.
+\end{theorem}
+
+\section{Number Theory Examples (continued)}
+
+\subsection{Fermat's Little Theorem}
+
+\begin{theorem}[Fermat's Little Theorem]
+If $p$ is a prime number and $a$ is an integer not divisible by $p$, then $a^{p-1} \equiv 1 \pmod{p}$.
+\end{theorem}
+
+\subsection{Euler's Totient Function}
+
+\begin{definition}
+The Euler's totient function $\phi(n)$ is the number of positive integers less than or equal to $n$ that are coprime to $n$.
+\end{definition}
+
+\subsection{Primitive Roots}
+
+\begin{definition}
+An integer $g$ is a primitive root modulo $n$ if every positive integer coprime to $n$ is congruent to a power of $g$ modulo $n$.
+\end{definition}
+
+\subsection{Quadratic Residues}
+
+\begin{definition}
+Let $p$ be a prime number and $a$ an integer not divisible by $p$. $a$ is called a quadratic residue modulo $p$ if there exists an integer $x$ such that $x^2 \equiv a \pmod{p}$.
+\end{definition}
+
+\subsection{Quadratic Reciprocity}
+
+\begin{theorem}[Quadratic Reciprocity]
+Let $p$ and $q$ be distinct odd prime numbers. Then, the congruence $x^2 \equiv p \pmod{q}$ has a solution if and only if the congruence $x^2 \equiv q \pmod{p}$ has a solution.
+\end{theorem}
+
+
+\subsection{Diophantine Equations}
+
+\begin{definition}
+A Diophantine equation is an equation where the solutions are sought among integers.
+\end{definition}
+
+\subsection{Pell's Equation}
+
+\begin{definition}
+The Pell's equation is a Diophantine equation of the form $x^2 - ny^2 = 1$, where $n$ is a non-square positive integer.
+\end{definition}
+
+\subsection{Continued Fractions}
+
+\begin{definition}
+A continued fraction is an expression of the form $[a_0; a_1, a_2, a_3, \ldots]$, where $a_i$ are integers and $a_0$ is a whole number.
+\end{definition}
+
+\subsection{Farey Sequences}
+
+\begin{definition}
+A Farey sequence of order $n$ is the sequence of all reduced fractions between 0 and 1 whose denominators do not exceed $n$.
+\end{definition}
+
+\subsection{Perfect Numbers}
+
+\begin{definition}
+A positive integer $n$ is said to be perfect if the sum of its proper divisors equals $n$.
+\end{definition}
+
+\subsection{Mersenne Primes}
+
+\begin{definition}
+A Mersenne prime is a prime number of the form $2^p - 1$, where both $p$ and $2^p - 1$ are prime.
+\end{definition}
+
+% ... Continue with more topics ...
+
+
+\section{Number Theory Examples (continued)}
+
+\subsection{Goldbach's Conjecture}
+
+\begin{theorem}[Goldbach's Conjecture]
+Every even integer greater than 2 can be expressed as the sum of two prime numbers.
+\end{theorem}
+
+\subsection{Riemann Zeta Function}
+
+\begin{definition}
+The Riemann zeta function is defined as $\zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s}$ for complex numbers $s$ with real part greater than 1.
+\end{definition}
+
+\subsection{Prime Number Theorem}
+
+\begin{theorem}[Prime Number Theorem]
+The prime number theorem states that the limit of the ratio of the number of primes up to $x$ and $x/\log x$ is 1 as $x$ approaches infinity.
+\end{theorem}
+
+\subsection{Distribution of Prime Gaps}
+
+\begin{theorem}
+The distribution of prime gaps follows a logarithmic pattern. The average gap between consecutive primes near $x$ is approximately $\log x$.
+\end{theorem}
+
+\subsection{Hardy-Littlewood Conjectures}
+
+\begin{theorem}[Hardy-Littlewood Conjectures]
+The Hardy-Littlewood prime tuples conjecture predicts the distribution of prime constellations, such as twin primes, prime quadruplets, and other patterns.
+\end{theorem}
+
+\subsection{Analytic Number Theory}
+
+\begin{definition}
+Analytic number theory uses methods from analysis to study the distribution of prime numbers and related number-theoretic functions.
+\end{definition}
+
+\subsection{Dirichlet's Theorem on Arithmetic Progressions}
+
+\begin{theorem}[Dirichlet's Theorem]
+For any two positive coprime integers $a$ and $d$, there are infinitely many primes of the form $a + nd$, where $n$ is a non-negative integer.
+\end{theorem}
+
+\subsection{Dedekind Zeta Function}
+\begin{definition}
+The Dedekind zeta function associated with an algebraic number field $K$ is a complex function that encodes information about the distribution of prime ideals in the ring of integers of $K$.
+\end{definition}
+
+\subsection{Elliptic Curves over $\mathbb{Q}$}
+
+\begin{definition}
+An elliptic curve over the rational numbers $\mathbb{Q}$ is a smooth projective curve with a specified point at infinity, and it can be defined by an equation of the form $y^2 = x^3 + ax + b$.
+\end{definition}
+
+\subsection{Modular Forms and L-Functions}
+
+\begin{definition}
+A modular form is a complex function that satisfies certain transformation properties under modular substitutions. L-functions are associated with modular forms and encode arithmetic information.
+\end{definition}
+
+\subsection{Birch and Swinnerton-Dyer Conjecture}
+
+\begin{theorem}[Birch and Swinnerton-Dyer Conjecture]
+For an elliptic curve $E$ over $\mathbb{Q}$, the rank of the group of rational points on $E$ is related to the order of vanishing of its L-function at its central critical point.
+\end{theorem}
+
+\subsection{ABC Conjecture}
+
+\begin{theorem}[ABC Conjecture]
+The ABC conjecture, proposed by Joseph Oesterlé and David Masser, states that for any positive integers $a, b, c$ that are coprime and satisfy $a + b = c$, the product of the distinct prime factors of $abc$ is usually much larger than $c$.
+\end{theorem}
+
+\subsection{Quadratic Forms}
+
+\begin{definition}
+A quadratic form is a homogeneous polynomial of degree 2 in several variables. It plays a crucial role in number theory, algebra, and geometry.
+\end{definition}
+
+\subsection{Class Numbers and Units}
+
+\begin{definition}
+The class number of an algebraic number field is a measure of the failure of unique factorization into prime elements. Units are invertible elements in the ring of integers of a number field.
+\end{definition}
+
+\subsection{L-functions of Algebraic Number Fields}
+
+\begin{definition}
+An L-function associated with an algebraic number field encodes information about the distribution of prime ideals in its ring of integers and reflects deep arithmetic properties.
+\end{definition}
+
+\subsection{Quadratic and Higher Reciprocity Laws}
+
+\begin{theorem}[Quadratic Reciprocity Law]
+Let $p$ and $q$ be distinct odd prime numbers. The Legendre symbol $\left(\frac{p}{q}\right)$ determines whether $p$ is a quadratic residue modulo $q$.
+\end{theorem}
+
+\subsection{Artin's Conjecture on Primitive Roots}
+
+\begin{theorem}[Artin's Conjecture]
+Artin's conjecture states that for any non-square integer $a$ and a positive integer $n$ coprime to $a$, there are infinitely many primes $p$ such that $a$ is a primitive root modulo $p$.
+\end{theorem}
+
+\subsection{Langlands Program}
+
+\begin{definition}
+The Langlands program is a vast and influential web of conjectures connecting number theory, representation theory, and harmonic analysis.
+\end{definition}
+
+\subsection{Algebraic Independence}
+
+\begin{definition}
+Algebraic numbers $\alpha_1, \alpha_2, \ldots, \alpha_n$ are said to be algebraically independent if no non-trivial polynomial equation with integer coefficients relates them.
+\end{definition}
+
+\subsection{Mahler's Method}
+
+\begin{definition}
+Mahler's method is a technique used to prove transcendence and algebraic independence results, based on the construction of linear forms in logarithms.
+\end{definition}
+
+\subsection{Diophantine Approximation}
+
+\begin{definition}
+Diophantine approximation deals with approximating irrational numbers by rational numbers with a specified level of accuracy.
+\end{definition}
+
+\subsection{Transcendental Numbers}
+
+\begin{definition}
+A real or complex number is called transcendental if it is not the root of any non-zero polynomial equation with integer coefficients.
+\end{definition}
+
+\subsection{Skolem's Problem}
+
+\begin{definition}
+Skolem's Problem concerns whether certain algebraic equations have integer solutions and is closely related to Diophantine equations and number theory.
+\end{definition}
+
+\subsection{S-unit Equations}
+
+\begin{definition}
+An S-unit equation is a Diophantine equation involving integers from a fixed finite set of prime factors.
+\end{definition}
+
+\subsection{Exponential Diophantine Equations}
+
+\begin{definition}
+Exponential Diophantine equations involve variables in exponent positions and are characterized by their intricate and challenging solutions.
+\end{definition}
+
+\subsection{Solving Polynomial Equations in Integers}
+
+\begin{theorem}
+For a given polynomial equation with integer coefficients, determining whether it has integer solutions is a fundamental problem in number theory.
+\end{theorem}
+
+\subsection{Gaps Between Consecutive Prime Powers}
+
+\begin{definition}
+The study of prime gaps includes understanding the distribution and size of gaps between consecutive prime numbers and prime powers.
+\end{definition}
+
+\subsection{Prime Constellations}
+
+\begin{definition}
+Prime constellations are patterns in the distribution of primes, such as twin primes, prime quadruplets, and other related structures.
+\end{definition}
+
+\subsection{Prime k-tuples Conjecture}
+
+\begin{theorem}[Prime k-tuples Conjecture]
+The prime k-tuples conjecture predicts the existence of infinitely many prime constellations of a certain form.
+\end{theorem}
+
+\subsection{Automorphic Forms and Representations}
+
+\begin{definition}
+Automorphic forms are complex functions that satisfy certain transformation properties under a group of linear fractional transformations. They have deep connections with number theory, representation theory, and geometry.
+\end{definition}
+
+\subsection{Lang's Conjectures}
+
+\begin{definition}
+Lang's conjectures are a series of far-reaching conjectures that propose connections between algebraic number theory, transcendence theory, and Diophantine geometry.
+\end{definition}
+
+\subsection{Subconvexity Bounds for L-functions}
+
+\begin{definition}
+Subconvexity bounds are estimates of the behavior of L-functions in the critical strip that provide important information about the distribution of their zeros.
+\end{definition}
+
+\subsection{Arithmetic Dynamics}
+
+\begin{definition}
+Arithmetic dynamics is the study of number-theoretic properties of iterative processes and their relationships with algebraic number theory and geometry.
+\end{definition}
+
+\subsection{Sums of Squares and Waring's Problem}
+
+\begin{definition}
+Waring's problem seeks to represent every positive integer as a sum of a fixed number of $k$th powers of positive integers, for a given $k$.
+\end{definition}
+
+\subsection{Arithmetic Combinatorics}
+
+\begin{definition}
+Arithmetic combinatorics explores the additive and multiplicative structures of integers and their relationships with combinatorial principles.
+\end{definition}
+
+
+\end{document}
