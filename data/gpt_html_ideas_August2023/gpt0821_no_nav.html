@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.binary-animation {
+  text-align: center;
+  font-size: 48px;
+  color: #0f0;
+}
+  .binary-digit {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+  body {
+	  background-color:black;
+	  color:white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .landing-page {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-container {
+    text-align: center;
+  }
+
+  .animated-text h1 {
+    font-size: 80px;
+    font-weight: bold;
+    opacity: 1;
+    animation: animateText 2s forwards;
+  }
+  .standard-text {
+    font-size: 45;
+    font-weight: normal;
+    opacity: 0;
+    animation: fadeInText 5s forwards;
+  }
+
+
+  .standard-text p{
+	  font-size:25px;
+  }
+  .standard-text h1 {
+    font-size: 40px;
+    font-weight: normal;
+    opacity: 0;
+    animation: fadeInText 5s forwards;
+  }
+
+  @keyframes animateText {
+    0% {
+      font-size: 80px;
+      opacity: 1;
+    }
+    100% {
+      font-size: 30px;
+      opacity: 0;
+    }
+  }
+
+  @keyframes fadeInText {
+    0% {
+      font-size: 40px;
+      opacity: 0;
+    }
+    100% {
+      font-size: 40px;
+      opacity: 1;
+    }
+  }
+  .navbar {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: #333;
+  width: 200px;
+  padding: 20px;
+  display: none;
+  z-index: 1;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navbar li {
+  margin-bottom: 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Show the navbar on hover */
+.navbar:hover {
+  display: block;
+}
+</style>
+</head>
+<body>
+ <div class="navbar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+  <div class="landing-page">
+
+
+    <div class="text-container">
+      <div class="animated-text">
+        <h1>Welcome!</h1>
+      </div>
+      <div class="standard-text">
+        <h1>Welcome to the Data</h1>
+        <p> Please take a look at my projects and dashboards. 
+	Feel free to reach out if you have any questions at
+	(818) 747-8150
+	</p>
+	  <div class="binary-animation">
+    <div class="binary-digits">
+      <p class="binary-digit">0</p>
+      <p class="binary-digit">0</p>
+      <p class="binary-digit">0</p>
+      <p class="binary-digit">0</p>
+      <p class="binary-digit">0</p>
+      <p class="binary-digit">0</p>
+      <p class="binary-digit">0</p>
+      <p class="binary-digit">0</p>
+      <p class="binary-digit">0</p>
+    </div>
+
+      </div>
+    </div>
+  </div>
+  <script>
+	  document.addEventListener("DOMContentLoaded", function() {
+  const binaryDigits = document.querySelectorAll(".binary-digit");
+
+  function updateBinary() {
+    binaryDigits.forEach(digit => {
+      digit.innerText = Math.round(Math.random()); // Set to 0 or 1 randomly
+    });
+  }
+
+  setInterval(updateBinary, 200); // Update every 200ms
+});
+
+  </script>
+</body>
+</html>
+
